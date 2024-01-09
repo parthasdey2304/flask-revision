@@ -5,24 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>{{ title }}</title>
+    <style>
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
 </head>
 <body class="m-0 p-0 flex justify-center">
     <div id="container" class="w-[1000px] h-screen border-2">
-        <div id="navbar" class="bg-red-600 w-full h-[100px] flex justify-between">
-            <div class="w-[150px] h-full flex justify-center item-center">
-                <span class="text-5xl text-white font-serif">LOGO</span>
+        <div id="navbar" class="bg-red-600 w-full h-[50px] flex justify-between absolute top-0">
+            <div class="w-[150px] h-[50px] flex justify-center item-center">
+                <span class="text-4xl text-white font-serif">LOGO</span>
             </div>
 
-            <div>
-                <ul>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
+            <div class="flex justify-end items-center px-5">
+                <ul class="flex justify-evenly text-white font-semibold">
+                    <li><a href="" class="hover:bg-white hover:rounded px-4 hover:py-1 duration-500 hover:duration-500 hover:text-red-600">Home</a></li>
+                    <li><a href="" class="hover:bg-white hover:rounded px-4 hover:py-1 duration-500 hover:duration-500 hover:text-red-600">Services</a></li>
+                    <li><a href="" class="hover:bg-white hover:rounded px-4 hover:py-1 duration-500 hover:duration-500 hover:text-red-600">Contact us</a></li>
+                    <li><a href="" class="hover:bg-white hover:rounded px-4 hover:py-1 duration-500 hover:duration-500 hover:text-red-600">About us</a></li>
                 </ul>
             </div>
         </div>
     </div>
+
+    <div id="footer" class="bg-blue-600 w-full h-[100px] flex justify-between absolute bottom-0"></div>
     
 </body>
 </html>
