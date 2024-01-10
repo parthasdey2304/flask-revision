@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>
+            Random Color
+        </title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <body class="w-full h-screen flex justify-center">
+        <div id="container" class="w-[600px] flex-col items-center py-10">
+            <h1 id="heading" class="text-5xl font-serif text-center">Generate a Random Color</h1>
+            <div class="w-full flex justify-center p-10">
+                <button id="generate_color" class="bg-blue-600 text-white px-4 py-2 rounded-full text-xl font-serif">Generate</button>
+            </div>
+
+            <div class="w-full flex justify-center">
+                <div id="color_box" class="w-[200px] h-[150px] border-4 border-black rounded-xl"></div>
+            </div>
+        </div>
+
+        <script>
+            const heading = document.querySelector('#heading');
+            const button = document.querySelector('#generate_color');
+            const color_box = document.querySelector('#color_box');
+
+            button.addEventListener('click', () => {
+                let red = Math.floor(Math.random() * 255);
+                let blue = Math.floor(Math.random() * 255);
+                let green = Math.floor(Math.random() * 255);
+
+                let new_heading = `rgb(${red}, ${blue}, ${green})`;
+                console.log("Random Color generated!");
+
+                heading.innerText = new_heading;
+                color_box.style.backgroundColor = new_heading;
+                console.log("Color of the div has been update!");
+            });
+        </script>
+    </body>
+</html>
